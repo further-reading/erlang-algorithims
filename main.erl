@@ -1,7 +1,8 @@
 -module(main).
 -author("further_reading").
 
--export([hello/0]).
+-export([count/2]).
 
-hello() ->
-  io:format("Hello, world!~n").
+count([], Sum) -> Sum;
+count([_|Tail], Sum) ->
+  count(Tail, Sum + 1).
