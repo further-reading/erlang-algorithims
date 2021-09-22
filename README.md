@@ -6,6 +6,7 @@ Creating array functions in erlang.
 2. Sum of array
 3. Average
 4. Median
-5. Count times element appears
-6. Longest sequence of repeating elements
-7. Bubblesort
+5. Factorial
+6. Count times element appears
+7. Longest sequence of repeating elements
+8. Bubblesort
