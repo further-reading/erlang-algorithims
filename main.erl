@@ -1,8 +1,8 @@
 -module(main).
 -author("further_reading").
 
--export([count/2]).
+-export([length/2]).
 
-count([], Sum) -> Sum;
-count([_|Tail], Sum) ->
-  count(Tail, Sum + 1).
+length([], Sum) -> Sum;
+length([_|Tail], Sum) ->
+  length(Tail, Sum + 1).
