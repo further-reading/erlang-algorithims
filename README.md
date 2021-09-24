@@ -2,10 +2,10 @@
 
 Creating array functions in erlang.
 
-1. Length of array (done)
+1. Length of array
 2. Sum of array
 3. Reverse array
-5. Factorial
-6. Count times element appears
-7. Longest sequence of repeating elements
-8. Bubblesort
+4. Factorial
+5. Count times element appears
+6. Count of Longest sequence of repeating elements
+7. Bubblesort
