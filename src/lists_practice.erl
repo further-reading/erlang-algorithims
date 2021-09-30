@@ -1,4 +1,4 @@
--module(main).
+-module(lists_practice).
 -author("further_reading").
 
 -export([length/1, sum/1, reverse/1, factorial/1, count_appearence/2, longest_repeating/1, bubble/1]).

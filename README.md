@@ -1,6 +1,6 @@
 # Erlang Practice
 
-Creating array functions in erlang.
+## Creating array functions in erlang.
 
 1. Length of array
 2. Sum of array
@@ -9,3 +9,7 @@ Creating array functions in erlang.
 5. Count times element appears
 6. Count of Longest sequence of repeating elements
 7. Bubblesort
+
+## Creating hashmap functions in erlang
+
+1. Counter
