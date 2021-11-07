@@ -9,6 +9,7 @@
 5. Count times element appears
 6. Count of Longest sequence of repeating elements
 7. Bubblesort
+8. Quicksort
 
 ## Creating hashmap functions in erlang
 

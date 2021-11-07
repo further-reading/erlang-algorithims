@@ -48,3 +48,9 @@ bubble_test() ->
   Actual = lists_practice:bubble(List_in),
   ?assertEqual(Actual, ["1", "2", "3", "4", "5"]),
   ok.
+
+quicksort_test() ->
+  List_in = ["4", "5", "3", "1", "2"],
+  Actual = lists_practice:quicksort(List_in),
+  ?assertEqual(Actual, ["1", "2", "3", "4", "5"]),
+  ok.
