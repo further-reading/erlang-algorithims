@@ -1,7 +1,7 @@
 -module(lists_practice).
 -author("further_reading").
 
--export([length/1, sum/1, reverse/1, factorial/1, count_appearence/2, longest_repeating_count/1, bubble/1, quicksort/1]).
+-export([length/1, sum/1, reverse/1, factorial/1, count_appearence/2, longest_repeating_count/1, bubble/1]).
 
 length(List) ->
   length(List, 0).
@@ -82,15 +82,3 @@ bubble([A, B|Tail], Smalls, Sorted) ->
   end;
 bubble([A], Smalls, Sorted) ->
   bubble(Smalls, [], [A|Sorted]).
-
-% taken from https://learnyousomeerlang.com/recursion
-quicksort([]) -> [];
-quicksort([Pivot|Rest]) ->
-  {Smaller, Larger} = partition(Pivot,Rest,[],[]),
-  quicksort(Smaller) ++ [Pivot] ++ quicksort(Larger).
-
-partition(_,[], Smaller, Larger) -> {Smaller, Larger};
-partition(Pivot, [H|T], Smaller, Larger) ->
-  if H =< Pivot -> partition(Pivot, T, [H|Smaller], Larger);
-    H >  Pivot -> partition(Pivot, T, Smaller, [H|Larger])
-  end.

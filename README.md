@@ -9,8 +9,12 @@
 5. Count times element appears
 6. Count of Longest sequence of repeating elements
 7. Bubblesort
-8. Quicksort
 
 ## Creating hashmap functions in erlang
 
 1. Counter
+
+## Trees in Erlang
+
+Code taken from https://learnyousomeerlang.com/recursion 
+The practice step here was creating unit tests found in tree_tests
