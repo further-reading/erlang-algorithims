@@ -18,3 +18,5 @@ _build/
 _checkouts/
 
 .idea/
+
+src/practice.erl
