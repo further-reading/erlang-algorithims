@@ -1,7 +1,7 @@
 -module(lists_practice).
 -author("further_reading").
 
--export([length/1, sum/1, reverse/1, factorial/1, count_appearence/2, longest_repeating/1, bubble/1]).
+-export([length/1, sum/1, reverse/1, factorial/1, count_appearence/2, longest_repeating_count/1, bubble/1]).
 
 length(List) ->
   length(List, 0).
@@ -18,10 +18,10 @@ factorial(N) ->
 count_appearence(List, Target) ->
   count_appearence(List, Target, 0).
 
-longest_repeating([]) ->
-  "Empty List";
-longest_repeating([H|Tail]) ->
-  longest_repeating([H|Tail], 0, H, 0).
+longest_repeating_count([]) ->
+  0;
+longest_repeating_count([H|Tail]) ->
+  longest_repeating_count([H|Tail], 0, H, 0).
 
 bubble(List) ->
   bubble(List, [], []).
@@ -60,17 +60,17 @@ count_appearence([_|Tail], Target, Acc) ->
 
 
 
-longest_repeating([], Curr, _, MaxSeen) ->
+longest_repeating_count([], Curr, _, MaxSeen) ->
   case Curr > MaxSeen of
     true -> Curr;
     false -> MaxSeen
   end;
-longest_repeating([A|Tail], Curr, A, MaxSeen) ->
-  longest_repeating(Tail, Curr + 1, A, MaxSeen);
-longest_repeating([A|Tail], Curr, _, MaxSeen) ->
+longest_repeating_count([A|Tail], Curr, A, MaxSeen) ->
+  longest_repeating_count(Tail, Curr + 1, A, MaxSeen);
+longest_repeating_count([A|Tail], Curr, _, MaxSeen) ->
   case Curr > MaxSeen of
-    true -> longest_repeating(Tail, 1, A, Curr);
-    false -> longest_repeating(Tail, 1, A, MaxSeen)
+    true -> longest_repeating_count(Tail, 1, A, Curr);
+    false -> longest_repeating_count(Tail, 1, A, MaxSeen)
   end.
 
 bubble([], [], Sorted) ->
